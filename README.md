@@ -1,6 +1,7 @@
 ## 📱 UI Screenshot
 
-![Main Screen](assets/ss.png)
+<img src="assets/ss.png" alt="Main Screen" width="300" height="600" style="border-radius: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
 _Welcome screen with user greeting, search functionality, brand categories, and popular cars_
 
 ### Installation
