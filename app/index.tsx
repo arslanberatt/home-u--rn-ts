@@ -1,25 +1,25 @@
-import { Stack, Link } from 'expo-router';
+import { View, ScrollView } from 'react-native';
+import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Header from '@/components/Header';
+import Searchbar from '@/components/Searchbar';
+import Categories from '@/components/Categories';
+import Products from '@/components/Products';
+import { BRANDS, CARS } from '@/data/data';
 
-import { View } from 'react-native';
-
-import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
-import { ScreenContent } from '@/components/ScreenContent';
-
-export default function Home() {
+const Index = () => {
   return (
-    <View className={styles.container}>
-      <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home"></ScreenContent>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
-        </Link>
-      </Container>
-    </View>
+    <SafeAreaView className="bg-gray-100">
+      <ScrollView>
+        <View className="px-8">
+          <Header greeting={'Welcome'} fullName={'Berat Arslan'} />
+          <Searchbar placeholder="Search your car" />
+          <Categories brands={BRANDS} />
+        </View>
+        <Products products={CARS} />
+      </ScrollView>
+    </SafeAreaView>
   );
-}
-
-const styles = {
-  container: 'flex flex-1 bg-white',
 };
+
+export default Index;
