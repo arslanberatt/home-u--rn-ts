@@ -6,7 +6,7 @@ import { CardProps } from '@/utils/types';
 const Card = ({ image, model, price, rating }: CardProps) => {
   const [favourite, setFavourite] = useState(false);
   return (
-    <TouchableOpacity activeOpacity={0.9} className="relative flex-1 rounded-3xl bg-gray-100">
+    <TouchableOpacity activeOpacity={0.9} className="relative flex-1 rounded-3xl bg-gray-100 p-2">
       <TouchableOpacity
         activeOpacity={0.9}
         onPress={() => setFavourite(!favourite)}
